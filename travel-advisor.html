@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Advisor</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="button-container-left">
+      <button class="button" id="enterDatesButton">Enter Dates</button>
+    </div>
+    <div class="Search-bar-container">
+      <input type="text" placeholder="&#128269; where to ? " class="Search-bar" id="search-bar">
+    </div>
+    <div class="button-container">
+      <button class="button" id="filterButton">Filters</button>
+      <button class="button" id="attractionsButton">Attractions</button>
+    </div>
+  </header>
+  <section>
+    <input type="range" min="1" max="5" step="1" value="1" id="rangeSlider">
+  </section>
+
+  <div class="loader-wrapper">
+    <div class="loader" id="loader"></div>
+  </div>
+
+  <div class="main">
+    <div class="listing-wrapper" id="listing-wrapper"></div>
+    <div class="map" id="map"></div>
+  </div>
+
+  <!-- Date Picker Modal -->
+  <div id="datePickerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeDatePicker">&times;</span>
+      <h2>Select Dates</h2>
+      <div class="date-picker-container">
+        <label for="checkInDate">Check-in Date:</label>
+        <input type="date" id="checkInDate">
+      </div>
+      <div class="date-picker-container">
+        <label for="checkOutDate">Check-out Date:</label>
+        <input type="date" id="checkOutDate">
+      </div>
+      <button class="button" id="submitDatesButton">Submit</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
